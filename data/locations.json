@@ -1,0 +1,17 @@
+{
+  "ESP32_TEST": {
+    "province": "Thanh Hóa"
+  },
+  "ESP32_TEST_2": {
+    "province": "Nghệ An"
+  },
+  "ESP32_DEFAULT": {
+    "province": "Hà Nội"
+  },
+  "ESP32_3C:0F:02:D0:83:D4": {
+    "province": "Thanh Hóa"
+  },
+  "3C:0F:02:D0:83:D4": {
+    "province": "Thanh Hóa"
+  }
+}
