@@ -16,7 +16,7 @@ mcp = FastMCP(
 def idle_screen_weather(
     address: str = "",
     save_location: bool = False,
-    device_id: str = "ESP32_DEFAULT"
+    esp_id: str = "ESP32_DEFAULT"
 ):
     """
     Hiển thị thời tiết trên màn hình chờ.
@@ -28,12 +28,12 @@ def idle_screen_weather(
         True  = lưu tỉnh này làm vị trí của thiết bị.
         False = chỉ lấy thời tiết, không thay đổi vị trí đã lưu.
 
-    device_id:
+    esp_id:
         ID của thiết bị đang sử dụng MCP.
     """
 
     print("\n========== MCP idle_screen_weather ==========")
-    print("DEVICE   =", repr(device_id))
+    print("DEVICE   =", repr(esp_id))
     print("ADDRESS  =", repr(address))
     print("SAVE     =", repr(save_location))
 
@@ -85,7 +85,7 @@ def idle_screen_weather(
             print("SAVING LOCATION...")
 
             saved = save_location_to_store(
-                device_id,
+                esp_id,
                 province
             )
 
@@ -108,7 +108,7 @@ def idle_screen_weather(
         weather = idle_weather(
             province,
             False,
-            device_id
+            esp_id
         )
 
         return {
@@ -124,7 +124,7 @@ def idle_screen_weather(
     #    → lấy vị trí đã lưu
     # =========================================================
 
-    province = get_location(device_id)
+    province = get_location(esp_id)
 
     print("SAVED LOCATION =", province)
 
@@ -147,7 +147,7 @@ def idle_screen_weather(
     weather = idle_weather(
         province,
         False,
-        device_id
+        esp_id
     )
 
     return {
