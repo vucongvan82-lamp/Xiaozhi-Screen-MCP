@@ -40,31 +40,31 @@ def _save_locations(data):
     os.replace(temp_file, DATA_FILE)
 
 
-def save_location(device_id, province):
+def save_location(esp_id, province):
     with _lock:
 
         locations = _load_locations()
 
-        locations[device_id] = {
+        locations[esp_id] = {
             "province": province
         }
 
         _save_locations(locations)
 
         print("========== LOCATION STORE ==========")
-        print("DEVICE   =", device_id)
+        print("DEVICE   =", esp_id)
         print("PROVINCE =", province)
 
         return True
 
 
-def get_location(device_id):
+def get_location(esp_id):
 
     with _lock:
 
         locations = _load_locations()
 
-        item = locations.get(device_id)
+        item = locations.get(esp_id)
 
         if item is None:
             return None
@@ -72,14 +72,14 @@ def get_location(device_id):
         return item.get("province")
 
 
-def delete_location(device_id):
+def delete_location(esp_id):
 
     with _lock:
 
         locations = _load_locations()
 
-        if device_id in locations:
-            del locations[device_id]
+        if esp_id in locations:
+            del locations[esp_id]
             _save_locations(locations)
 
         return True
