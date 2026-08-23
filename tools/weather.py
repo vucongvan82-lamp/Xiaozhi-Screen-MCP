@@ -5,7 +5,7 @@ from datetime import datetime
 def idle_weather(
         address="",
         save_location=False,
-        device_id=""):
+        esp_id=""):
     
     data = get_weather(address)
 
@@ -21,6 +21,6 @@ def idle_weather(
         "Trợ lý ảo": "Gia Vũ",
         "Ngày": f'{now.strftime("%d/%m/%Y")} - {now.strftime("%H:%M:%S")}',
         "Tỉnh": location,
-        "ESP_MAC": device_id,
+        "ESP_MAC": esp_id,
         "Thời tiết": f'{round(temp)}°C ; {humidity}%'
     }
