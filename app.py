@@ -18,13 +18,6 @@ def idle_screen_weather(
     save_location: bool = False,
     esp_id: str = "ESP32_DEFAULT"
 ):
-    print("========================================")
-    print("      idle_screen_weather CALLED")
-    print("========================================")
-    print("address       =", address)
-    print("save_location =", save_location)
-    print("esp_id        =", esp_id)
-    print("========================================")
     """
     Hiển thị thời tiết trên màn hình chờ.
 
@@ -38,11 +31,13 @@ def idle_screen_weather(
     esp_id:
         ID của thiết bị đang sử dụng MCP.
     """
-
-    print("\n========== MCP idle_screen_weather ==========")
-    print("DEVICE   =", repr(esp_id))
-    print("ADDRESS  =", repr(address))
-    print("SAVE     =", repr(save_location))
+    print("========================================")
+    print("      idle_screen_weather CALLED")
+    print("========================================")
+    print("address       =", address)
+    print("save_location =", save_location)
+    print("esp_id        =", esp_id)
+    print("========================================")
 
     # =========================================================
     # 1. Nếu người dùng truyền địa chỉ mới
