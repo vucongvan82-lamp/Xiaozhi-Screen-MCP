@@ -2,8 +2,8 @@ import json
 import os
 import threading
 
-
-DATA_DIR = "data"
+BASE_DIR = os.path.dirname(os.path.abspath(Xiaozhi-Screen-MCP/data/locations.json))
+DATA_DIR = os.path.join(BASE_DIR, "data")
 DATA_FILE = os.path.join(DATA_DIR, "locations.json")
 
 _lock = threading.Lock()
