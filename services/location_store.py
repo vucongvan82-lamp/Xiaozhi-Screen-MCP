@@ -2,7 +2,7 @@ import json
 import os
 import threading
 
-BASE_DIR = os.path.dirname(os.path.abspath(Xiaozhi-Screen-MCP/data/locations.json))
+BASE_DIR = os.path.dirname(os.path.abspath(https://github.com/vucongvan82-lamp/Xiaozhi-Screen-MCP/blob/main/data/locations.json))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 DATA_FILE = os.path.join(DATA_DIR, "locations.json")
 
