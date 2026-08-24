@@ -18,6 +18,13 @@ def idle_screen_weather(
     save_location: bool = False,
     esp_id: str = "ESP32_DEFAULT"
 ):
+    print("========================================")
+    print("      idle_screen_weather CALLED")
+    print("========================================")
+    print("address       =", address)
+    print("save_location =", save_location)
+    print("esp_id        =", esp_id)
+    print("========================================")
     """
     Hiển thị thời tiết trên màn hình chờ.
 
